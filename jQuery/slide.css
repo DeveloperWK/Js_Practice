@@ -1,0 +1,66 @@
+	p.lorem_01{
+		background: #333;
+		margin: auto;
+		color:white;
+		width: 500px;
+		text-align: center;
+		padding: 10px;
+		font-size:20px;
+		display: none;
+
+	}
+	button.btn_01{
+		background: red;
+		margin-left:420px;
+		margin-bottom: 5px;
+		color:white;
+		width: 500px;
+		text-align:center;
+		padding: 10px;
+		font-size:20px;
+
+	}
+	p.lorem_02{
+		background: #333;
+		margin: auto;
+		color:white;
+		width: 500px;
+		text-align: center;
+		padding: 10px;
+		font-size:20px;
+
+	}
+	button.btn_02{
+		background: red;
+		margin-left:420px;
+		margin-bottom: 5px;
+		margin-top:10px;
+		color:white;
+		width: 500px;
+		text-align:center;
+		padding: 10px;
+		font-size:20px;
+
+	}
+	p.lorem_03{
+		background: #333;
+		margin: auto;
+		color:white;
+		width: 500px;
+		text-align: center;
+		padding: 10px;
+		font-size:20px;
+
+	}
+	button.btn_03{
+		background: red;
+		margin-left:420px;
+		margin-bottom: 5px;
+		margin-top:10px;
+		color:white;
+		width: 500px;
+		text-align:center;
+		padding: 10px;
+		font-size:20px;
+
+	}

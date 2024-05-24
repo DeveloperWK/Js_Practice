@@ -1,0 +1,32 @@
+	.box1{
+		height: 100px;
+		width: 100px;
+		background: red;
+		margin: 10px;
+		display: none;
+	}	
+	.box2{
+		height: 100px;
+		width: 100px;
+		background: green;
+		margin: 10px;
+	}	
+	.box3{
+		height: 100px;
+		width: 100px;
+		background: teal;
+		margin: 10px;
+	}
+	.box4{
+		height: 100px;
+		width: 100px;
+		background:blue;
+		margin: 10px;
+	}
+	.btn{
+		height: 50px;
+		width: 100px;
+		background: yellow;
+		color:red;
+		font-size: 15px;
+	}
