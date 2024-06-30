@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1>This is demo</h1>
+    <h3>Length</h3>
+</body>
+<script>
+    var count = 0;
+    document.addEventListener("keypress", function (event) {
+        count++
+        var text = event.key
+        var event = document.querySelector("h1").innerHTML = "You are pressed" + " " + text
+        var length = document.querySelector("h3").innerHTML = "You are Pressed " + " " + count + " Word";
+
+
+
+
+    })
+</script>
+
+</html>

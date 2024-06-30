@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head h1 {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-size: 70px;
+  text-shadow: 5px 5px 20px;
+  color: aliceblue;
+}
+
+.board {
+  width: 98vw;
+  height: 60vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+.board .cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n+1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n+3) {
+  border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+  border-bottom: none;
+}
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
+}
+
+.cell.x::before,
+::after,
+.cell.circle::before {
+  background-color: white;
+}
+
+.board.x .cell:not(.x, .circle):hover::before,
+.board.x .cell:not(.x, .circle):hover::after,
+.board.circle .cell:not(.x, .circle):hover::before {
+  background-color: lightgrey;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x, .circle):hover::before,
+.board.x .cell:not(.x, .circle):hover::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 90px;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x, .circle):hover::before {
+  transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x, .circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x, .circle):hover::before,
+.board.circle :not(.x, .circle):hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.x, .circle):hover::before {
+  width: 90px;
+  height: 90px;
+}
+
+.cell.circle::after,
+.board.circle .cell:not(.x, .circle):hover::after {
+  width: 63px;
+  height: 63px;
+  background-color: cornflowerblue;
+}
+
+.win-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+#restartButton {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+#restartButton:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.win-message.show {
+  display: flex;
+}
+
+.develop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.develop h1 {
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: 5px 5px 20px;
+  color: azure;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  .head h1 {
+    font-size: 55px;
+  }
+  .develop h1 {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  .head h1 {
+    font-size: 55px;
+  }
+  .develop h1 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,22 @@
+<html>
+<script>
+  var numOfWon = 0;
+  var numOfLose = 0;
+
+  var randomNum = Math.floor(Math.random() * 5) + 1;
+  for (var x = 1; x <= 5; x++) {
+    var inputNum = parseInt(prompt("Enter a Number from 1 to 5 "));
+    if (inputNum === randomNum) {
+      console.log("you have won");
+      numOfWon++;
+    } else {
+      console.log("you are lost the right number is " + randomNum);
+      numOfLose++;
+    }
+  }
+  document.write('Your Won Point is ' + numOfWon + '<br>');
+  document.write('Your lose Point is ' + numOfLose);
+
+</script>
+
+</html>

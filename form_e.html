@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="text">Name
+            <input type="text" name="name" id="name" required>
+        </label>
+        <label for="email">E-mail
+            <input type="email" name="email" id="email" required>
+        </label>
+        <label for="password">password
+            <input type="password" name="password" id="password" required>
+        </label>
+        <label for="submit">Submit
+            <input type="submit" value="Signin">
+        </label>
+    </form>
+    <script>
+        var form = document.querySelector("form");
+        var namee = form.querySelector("#name");
+        var email = form.querySelector("#email");
+        var password = form.querySelector("#password");
+
+        form.addEventListener("submit", formHandelar);
+
+        function formHandelar(e) {
+            e.preventDefault();
+            var userInfo = {
+                name: namee.value,
+                email: email.value,
+                password: password.value
+            }
+            console.log(userInfo);
+            namee.value = ""
+            email.value = ""
+            password.value = ""
+        }
+
+    </script>
+</body>
+
+</html>
